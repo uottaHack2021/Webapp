@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+        integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>StockHub</title>
+</head>
+
+<body>
+    {{> _header}}
+    {{> _add_btn}}
+    <div class="container">
+        {{{body}}}
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.14.1/ckeditor.js"
+        integrity="sha256-bEIQpI72w9NJuIVhTLFUF2/8uxl0u5800r8ddViuv+o=" crossorigin="anonymous"></script>
+
+    <script>
+        M.Sidenav.init(document.querySelector('.sidenav'))
+        M.FormSelect.init(document.querySelector('#status'))
+        CKEDITOR.plugins.addExternal('timestamp', 'https://ckeditor.com/docs/ckeditor4/4.15.1/examples/assets/plugins/timestamp/', 'plugin.js');
+
+        CKEDITOR.replace('body', {
+            extraPlugins: 'timestamp'
+        });
+
+
+        CKEDITOR.replace('body', {
+            plugins: 'wysiwygarea, toolbar, basicstyles, link, image, table,',
+        })
+    </script>
+    <script>
+        Handlebars.registerHelper("select", function (value, options) {
+            return options.fn(this)
+                .split('\n')
+                .map(function (v) {
+                    var t = 'value="' + value + '"'
+                    return !RegExp(t).test(v) ? v : v.replace(t, t + ' selected="selected"')
+                })
+                .join('\n')
+        }
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    {{!--
+    <script src="typed.js"></script>
+    <script>
+                var typed = new Typed('.type', {
+                    strings: [
+                        'All Public Stock Stories....^700',
+
+                    ],
+                    typeSpeed: 40,
+                    backSpeed: 40,
+                    startDelay: 700,
+                    showCursor: true,
+                    cursorChar: '|',
+                    autoInsertCss: true,
+                    loop: true,
+                    loopCount: Infinity,
+                });
+    </script> --}}
+</body>
+
+</html>

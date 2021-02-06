@@ -1,0 +1,38 @@
+<div>
+    <h3><i class="fas fa-users"></i>StockHub Login</h3>
+    <div class="section">
+        <p class="lead">Create and Share your Stock porfolio & Strategies</p>
+    </div>
+    <div class="divider"></div>
+
+
+    <div class="sign-up-form">
+        <form action="/users/login" method="POST">
+            <input type="email" class="input-box" placeholder="Your Email" name="email" required>
+            <input type="password" class="input-box" placeholder="Your Password" name="password" required>
+            <label for="">Dont have an account? </label>
+            {{!-- <button type="button" class="sign-btn" href="/register">Sign Up</button> --}}
+            <a href="/users/register">Sign Up</a>
+            <br>
+            <br>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Login</button>
+                <div class="section">
+                    <a href="/auth/google" class="btn red darken-1">
+                        <i class="fab fa-google left"></i> Log In With Google
+                    </a>
+                </div>
+
+        </form>
+    </div>
+
+    {{!-- <div class="section">
+        <a href="" class="btn blue darken-1">
+            <i class="fab fa-google left"></i> Log In With Facebook
+        </a>
+    </div> --}}
+    {{!-- <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
+        data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div> --}}
+
+
+</div>

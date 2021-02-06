@@ -1,0 +1,177 @@
+p {
+  margin: 10px 0 !important;
+  text-align: center;
+}
+
+.login-container {
+  width: 400px;
+  margin-top: 50px;
+  text-align: center;
+}
+.avatar {
+  vertical-align: middle;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  text-align: center;
+  padding-left: 20px;
+}
+#navhead {
+  color: black;
+  text-align: center;
+}
+
+.fa-small {
+  font-size: 16px !important;
+}
+
+.btn-float {
+  float: left;
+  margin-right: 10px;
+}
+
+.btn {
+  border-radius: 15px;
+}
+
+.card {
+  border-radius: 30px;
+  border-style: solid;
+  border-color: cornflowerblue;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translate(-1.5rem) scale(1.1);
+}
+
+.img-small {
+  width: 180px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-size: cover;
+  background-position: center;
+}
+
+.sign-up-form {
+  width: 300px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  background: #fff;
+  padding: 20px;
+  margin: 8% auto 0;
+  text-align: center;
+}
+#login {
+  background-image: url(stock.jpg);
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-size: 130%;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-position:  */
+}
+#login1 {
+  background-image: url(stock.jpg);
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-size: 130%;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-position:  */
+}
+h3 {
+  text-align: center;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  padding-right: 600px;
+  text-align: center;
+}
+
+img {
+  height: 200px;
+  width: 320px;
+}
+#nav:hover {
+  transform: translate(+1.5rem) scale(1.1);
+  background-color: rgba(179, 238, 240, 0.664);
+}
+#nav {
+  transition: 0.3s;
+  text-align: center;
+  padding-right: 20px;
+}
+.sidenav {
+  border-radius: 25px;
+}
+#header {
+  box-shadow: cornflowerblue;
+  box-sizing: border-box;
+}
+#add {
+  transition: 0.3s;
+}
+#add:hover {
+  transform: translate(1.5rem) scale(1.1);
+}
+.sidenav-trigger {
+  transition: 0.3s;
+}
+.sidenav-trigger:hover {
+  transform: scale(2);
+}
+#zoom {
+  transition: 0.3s;
+}
+#zoom:hover {
+  transform: translate(-3.5rem) scale(1.5);
+}
+#zoom1 {
+  text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+  #logout {
+    padding-top: 18px;
+  }
+  #zoom:hover {
+    transform: none;
+  }
+
+  .footer {
+    text-align: center;
+  }
+  .btn {
+    padding-bottom: 20px;
+  }
+  .table {
+    height: 120px;
+  }
+  .fass {
+    height: 20px;
+    width: 20px;
+  }
+  .footer {
+    padding-right: 50px;
+    padding-top: 100px;
+  }
+  #login {
+    background-image: none;
+    padding-top: 70px;
+  }
+  #login1 {
+    background-image: none;
+  }
+  .card:hover {
+    transform: none;
+  }
+}
